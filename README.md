@@ -44,13 +44,14 @@ This is a simple Task Management web application built using Flask, a lightweigh
 ```
 python3 -m venv venv
 source venv/bin/activate
+```
 
 
 ### Install dependencies:
 
 ```
 pip install Flask
-
+```
 ### Run the application
 
 ```
