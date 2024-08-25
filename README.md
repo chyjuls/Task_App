@@ -20,3 +20,33 @@ This is a simple Task Management web application built using Flask, a lightweigh
 
 ## Project Structure
 
+/flask_task_app ├── venv/ # Virtual environment directory ├── application.py # Main Flask application file ├── templates/ # Directory for HTML templates │ ├── index.html # Home page template │ ├── welcome.html # Welcome page template │ └── edit.html # Task editing template └── static/ # Directory for static files like CSS └── styles.css # Custom CSS for styling the app
+
+
+## Installation
+
+### Prerequisites
+
+- Python 3.x
+- `pip` (Python package installer)
+- `virtualenv` (optional but recommended)
+
+### Setup Instructions
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name
+
+### Create and activate a virtual environment:
+
+python3 -m venv venv
+source venv/bin/activate
+
+### Install dependencies:
+pip install Flask
+
+### Run the app;lication
+python application.py
+
