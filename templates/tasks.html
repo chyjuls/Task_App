@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Task List</h1>
+        <form action="/add" method="POST">
+            <input type="text" name="task" placeholder="Enter a new task" required>
+            <button type="submit" class="btn">Add Task</button>
+        </form>
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    {% if task.completed %}
+                        <strike>{{ task.description }}</strike>
+                    {% else %}
+                        {{ task.description }}
+                    {% endif %}
+                    <a href="{{ url_for('complete_task', task_id=task.id) }}" class="btn">Complete</a>
+                    <a href="{{ url_for('edit_task', task_id=task.id) }}" class="btn">Edit</a>
+                    <a href="{{ url_for('delete_task', task_id=task.id) }}" class="btn">Delete</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('welcome') }}" class="btn">Back to Welcome</a>
+    </div>
+</body>
+</html>
+
+
